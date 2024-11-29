@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 中间的分割线 -->
+    <View
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000"
+        android:layout_centerVertical="true"/>
+
+    <RelativeLayout
+        android:id="@+id/redLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/guideline"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-4dp"
+        android:layout_marginBottom="5dp"
+        android:background="#FF0000">
+
+        <TextView
+            android:id="@+id/topScoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="192sp" />
+
+        <TextView
+            android:id="@+id/TeamATextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/topScoreTextView"
+            android:layout_centerHorizontal="true"
+            android:text="@string/team_a"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/blueLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0000FF"
+        android:layout_below="@id/guideline"
+        android:layout_alignParentBottom="true">
+
+        <!-- 下方分數 TextView -->
+        <TextView
+            android:id="@+id/bottomScoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="192sp"
+            android:layout_centerInParent="true" />
+
+        <!-- 隊伍信息 TextView -->
+        <TextView
+            android:id="@+id/TeamBTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/team_b"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp"
+            android:layout_below="@id/bottomScoreTextView"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <!-- 設定的按鈕 -->
+        <Button
+            android:id="@+id/settingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚙️"
+            android:textSize="48sp"
+            android:textColor="#FFFFFF"
+            android:layout_centerVertical="true"/>
+
+        <!-- 重新計算分數的按鈕 -->
+        <Button
+            android:id="@+id/resetScoreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="↻"
+            android:textSize="48sp"
+            android:textColor="#FFFFFF"
+            android:layout_toEndOf="@id/settingButton"
+            android:layout_marginStart="20dp"
+            android:layout_alignBaseline="@id/settingButton"/>
+
+    </RelativeLayout>
+
+    <!-- 顯示隊伍名稱的 TextView -->
+    <TextView
+        android:id="@+id/teamNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:layout_below="@id/guideline"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
